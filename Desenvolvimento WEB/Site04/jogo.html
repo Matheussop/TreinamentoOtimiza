@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <title>Jogo da Velha</title>
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+        <script type="text/javascript">
+            var interval = null;
+            $(document).ready(function(){
+                $("#btn_Comecar").click(function(){
+                    var jog1 = $("input[name=jogador1]").val();
+
+                    var jog2 = $("input[name=jogador2]").val();
+
+                    if(jog1.trim().length > 0 && jog2.trim().length > 0){
+                        comecarJogo();
+                        $(".msg1").text("O jogo começou");
+                    }else{
+                        $(".msg1").text("Nome(s) não preenchido(s)");
+                    }
+                });
+            });
+            function comecarJogo(){
+                var contadorClicks = 0;
+                var vencedor = arrayVencedor();
+
+                interval = setInterval(TempoDecorido, 500);
+                $("table td").click(function(){
+                    contadorClicks++;
+                    if(contadorClicks <= 9){
+                        if(contadorClicks % 2 == 0){
+                            $(this).text("X");
+                        }else{
+                            $(this).text("O");
+                        }
+                        if(verificarGanhador(vencedor)){
+                            contadorClicks = 9;
+                        }
+                        if(contadorClicks == 9){
+                            $(".msg1").append("<br/> Jogo encerrado");
+                            clearInterval(interval);
+                        }
+                    }
+
+                });
+            }
+            function arrayVencedor(){
+                var vencedor = [
+                    [0,1,2],
+                    [3,4,5],
+                    [6,7,8],
+
+                    [0,3,6],
+                    [1,4,7],
+                    [2,5,8],
+
+                    [0,4,8],
+                    [6,4,2]
+                ];
+                return vencedor;
+            }
+            function verificarGanhador(vencedor){
+                var X = new Array(9);
+                var O = new Array(9);
+                $("table td").each(function(key, value){
+                    if($(this).text() == "X"){
+                        X[key] = key;
+                    }else if ($(this).text() == "O"){
+                        O[key] = key;
+                    }
+                });
+                return definirGanhador(vencedor,X,O);
+            }
+            function definirGanhador(vencedor,X,O){
+                for(var i = 0; i < vencedor.length; i++){
+                    var contadorX = 0;
+                    var contadorO = 0;
+                
+                    for(var x = 0; x < vencedor[i].length; x++){
+                        // if(contadorT > 5){
+                            if(X[vencedor[i][x]]== vencedor[i][x]){
+                                contadorX++;
+                            }
+                            if(O[vencedor[i][x]] == vencedor[i][x]){
+                                contadorO++;
+                            }
+
+                            vencedor[i][x]
+                        // }
+                    }
+                    var jog1 = $("input[name=jogador1]").val();
+                    var jog2 = $("input[name=jogador2]").val()
+                    if(contadorX == 3){
+                        $(".msg1").text("O Vencedor foi o " + jog1);
+                        return true;
+                    }else if (contadorO == 3){
+                        $(".msg1").text(`O Vencedor foi o ${jog2}`);
+                        return true;
+                    }
+                }
+            }
+            var inicioJogo = null;
+            function TempoDecorido(){
+                if(inicioJogo == null){
+                    inicioJogo = new Date();
+                }
+                var dataAtual = new Date();
+        
+                var segIni = inicioJogo.getSeconds();
+                var segAtual = dataAtual.getSeconds();
+
+                var minIni = inicioJogo.getMinutes();
+                var minAtual = dataAtual.getMinutes();
+
+                var horaIni = inicioJogo.getHours();
+                var horaAtual = dataAtual.getHours();
+
+                var timeIni = inicioJogo.getTime();
+                var timeAtual = dataAtual.getTime();
+
+                var timeDec = timeAtual - timeIni;
+                var novaData = new Date(timeDec);
+                $("#tempo").text("Início do Jogo: " + horaIni + ":" + minIni + ":" + segIni + " - "
+                + "Hora atual: "  + horaAtual + ":" + minAtual + ":" +  segAtual
+                + " - Tempo decorrido: " + novaData.getMinutes() + ":" + novaData.getSeconds());
+            }
+        </script>
+
+
+    </head>
+    <body>
+        <div class="configurador">
+            <div class="msg1">
+
+            </div>
+            <span>X</span><input type="text" name = "jogador1" placeholder="Nome Jogador 1">
+            X
+            <input type="text" name = "jogador2" placeholder="Nome Jogador 2"><span>O</span>
+            <br/>
+            <br/>
+            <button id="btn_Comecar">Começar Jogo</button>
+            <br/>
+            <div id="msg"></div>
+        </div>
+        <table>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+        <div id="tempo"></div>
+    </body>
+</html>

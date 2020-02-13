@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+@font-face {
+    font-family: "Florentia";
+    src:url("fonts/Florentia-Thin-trial.ttf")
+}
+.barra-superior {
+    border-bottom: 1px solid rgb(204,204,204);
+    color: rgb(187,187,187);
+
+}
+
+.clearfix {
+    clear: both;
+}
+
+.barra-superior .container{
+    padding: 10px 0px 10px 0px;
+}
+.container{
+    max-width: 960px;
+    min-width: 100px;
+    width: 100%;
+    margin:0 auto;
+}
+body {
+    margin:0 ;
+    font-family: "Raleway", "Florentia", sans-serif ;
+}
+
+nav{
+    color: rgb(187,187,187);
+    font-size: 12px;
+    float : right;
+    margin-top: 50px;
+}
+
+nav a {
+    color: rgb(187,187,187);
+    text-decoration:none;
+}
+
+.btn_destaque, .metade input[type=submit] {
+    border: none;
+    color : #fff;
+    padding : 12px 40px;
+    background-color: rgb(255,77,77);
+    border-radius: 3px;
+    margin-left: 25px;
+    text-decoration:none;
+    font-size: 14px;
+}
+
+.sec01 {
+    color: #fff;
+    background-image: url(../img/home.png);
+    background-repeat: no-repeat;
+    background-position:center;
+    height: 640px;
+    background-color: rgb(164,164,164);
+}
+
+
+.sec01 p.titulo {
+    font-size:48px;
+    padding-top: 130px;
+}
+
+.sec01 p {
+    font-size: 24px;
+    padding-bottom: 30px;
+    line-height: 120%;
+}
+
+.sec02 p {
+    font-size:30px;
+    text-align:center;
+}
+
+.sec02 {
+    border-bottom: 1px solid rgb(204,204,204);
+    line-height:120%;
+}
+
+.sec02 img {
+    width: 100%;
+    margin-bottom: 50px;
+}
+.sec03 {
+    background-color:rgb(239,243,249);
+    height: 664px;
+    background-image: url("../img/Home2.png");
+    height: 664px;
+    background-position:right;
+    background-repeat: no-repeat;
+}
+.sec03 p {
+    font-size:54px;
+    line-height: 120%;
+    color:rgb(102,102,102);
+    padding: 100px 0px 40px 0px;
+}
+
+.largura40 {
+    width: 35%;
+    float: left;
+    background-color:rgb(239,243,249);
+    height: 664px;
+}
+
+.direitos {
+    background-color: rgb(255,77,77);
+    color: white;
+    text-align: center;
+    padding: 45px 0px 45px 0px;
+}
+
+.direitos a{
+    color: white;
+}
+
+.um_terco {
+    width: 33%  ;
+    float: left;
+    padding: 30px 0px 50px 0px; 
+}
+.um_terco img{
+    width:35px; 
+}
+.um_terco ,.um_terco a {
+    color: rgb(136, 136, 136);
+}
+.um_terco .logo {
+    width: 100%;
+}
+
+.margem_esquerda{
+    margin-left:30px
+}
+.sec_fale, .sec_onde{
+    height: 500px;
+    background-color: #FAFAFA;
+}
+.sec_fale .metade {
+    padding-top: 100px;
+}
+.metade {
+    width: 50%;
+    float: left;
+    line-height: 150%;
+   
+}
+.metade form{
+    line-height: 250%;
+}
+.metade form input[type=text], [type=email],textarea{
+    border: none;
+    border-bottom: 1px solid lightgrey;
+    width: 63%;
+    background-color: #FAFAFA;
+    padding:10px;
+}
+.metade textarea{
+    min-height: 100px;
+}
+.metade input[type=submit] {
+    float: right;
+}
+.metade img {
+    width:35px;
+}
+.metade div, .metade address {
+    margin-left:20px
+}
+.metade label  {
+    width: 30%;
+    display: inline-block;
+    vertical-align: top;
+}
+@media screen and (min-width: 481px) and (max-width: 1366px){
+    
+}
+@media screen and (max-width: 540px){
+    .barra-superior .container {
+        margin-left: 10px;
+    }
+    .logo {
+        width: 100%;
+    }
+    nav {
+        float: none;
+        margin-left: 10px;
+        text-align: center;
+        font-size:18px;
+    }
+    nav .btn_destaque {
+        margin-left: 0;
+    }
+    .sec01 p, .sec01 .btn_destaque {
+        margin-left: 20px;
+    }
+    .sec03 {
+        background-image:  none;
+        height: 450px;
+        text-align: center;
+        border-bottom: 1px solid rgb(204,204,204);
+    }
+    .sec03 p {
+        padding-top: 10px;
+        
+    }
+    .sec03 .largura40 {
+        padding-bottom: 30px;
+    }
+    .largura40 {
+        width: 100%;
+        height: 450px;
+    }
+    .um_terco {
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid rgb(204,204,204);
+        padding-left: 20px;
+    }
+    .margem_esquerda {
+        margin-left: 0px;
+    }
+
+    .um_terco .logo {
+        width: 50%;
+    }
+    .container_Logo {
+        text-align: center;
+    }
+}

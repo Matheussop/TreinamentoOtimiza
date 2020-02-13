@@ -1,0 +1,43 @@
+﻿-----Comando que toda vez que salva o typescript gera o javascript : tsc -w
+-----Comando para iniciar um server local : ng serve 
+-----Comando para criar um novo componente : ng g c nomeComponente -spec=false(caso n queira verificação).
+-----Comando para iniciar o banco de dados : json-serve db.json
+-----Comando para iniciar o banco de dados node : nodemon --watch backend backend/dist/server.js
+tipos do typescript 
+    boolean
+    number
+    string
+    any // n é muito recomendado
+
+Para que js salve em diretorio diferente do typescript:
+    {
+        "compilerOptions": {
+            "outDir": "dist"
+        }
+    }
+
+Para criar um função
+    function useTheForce(name:string):void {
+        console.log('Use the force,' + name);
+    }
+
+    let shortestRun = function (parsecs:number):boolean{
+        return parsecs < 12;
+    }
+
+    let tieFighters = ships.filter(function(ship){
+        return ship.type === 'TieFighter'
+    }) // o msm codigo pode ser escrito da seguinte maneira
+
+    let ties = ships.filter(ship => ship.type === 'TieFighter')
+
+
+    O que é um componente: (são pequenas partes independentes e reusáveis),
+     em Angular são classes que tem um determinado ciclo de vida, possui um template para definir uma aparencia
+     e um selector(tag) utilizada por outras partes da aplicação.
+     são dispostos em estrutura de arvore.
+
+     Diretivas ngif e ngfor
+
+     Injectable é necessario apenas para receber injeções e não para enviar el
+

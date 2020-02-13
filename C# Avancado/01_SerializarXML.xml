@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Usuario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <nome>Matheus</nome>
+  <CPF>143.381.502-00</CPF>
+  <email>teste@gmail.com</email>
+</Usuario>

@@ -1,0 +1,9 @@
+{
+    "compilerOptions": {
+        "outDir": "dist",
+        "typeRoots": [
+            "node_modules/@types"
+        ]
+        //"noEmitOnError": true // para n poder compilar em js se der warning em typescript
+    }
+}

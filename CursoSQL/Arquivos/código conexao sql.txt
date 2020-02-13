@@ -1,0 +1,97 @@
+Function ConectarSQL(Sql As String, TextBox As String)
+Dim Coluna, Linha
+Dim Conect As Object
+
+On Error GoTo ErrorHandler
+
+'Criamos o objeto da conexão
+
+Set Conect = CreateObject("ADODB.Connection")
+
+' Especificamos a conexão que usaremos
+
+With frmSQLServer
+    servidor = .txt_servidor.Value
+    Usuario = .txt_usuario.Value
+    pass = .txt_senha.Value
+    base = .txt_bd.Value
+End With
+
+
+Conexion = "Provider=SQLOLEDB.1;" & _
+           "Password=" & pass & ";" & _
+           "Persist Security Info=True;" & _
+           "User ID=" & Usuario & ";" & _
+           "Initial Catalog=" & base & ";" & _
+           "Data Source=" & servidor
+
+Conect.ConnectionString = Conexion
+
+'Ver se tem parametros vazios
+If Sql <> vbNullString And TextBox <> vbNullString Then
+
+    
+    Dim RecordSet As Object
+
+    'Abrir conexao com banco
+    Conect.Open
+
+    'Criar novo RecordSet
+    Set RecordSet = CreateObject("ADODB.Recordset")
+
+    'SQL para chamar RecordSet
+    RecordSet.Open Sql, Conect
+    ' variaveis para indices das colunas e linhas
+    Columna = 0
+    Fila = 0
+
+    'Buscando nome do campo e cabeçalho
+    For i = 0 To RecordSet.Fields.Count - 1
+        Planilha1.Range(Chr(i + 65) & Linha + 1).Value = RecordSet.Fields(i).Name
+    Next
+
+    Linha = Linha + 1
+
+    'Fazer o recordset percorrer ate a ultima linha
+    Do While Not RecordSet.EOF
+
+        'Percorrer registros atuais para o recordset recuperar
+
+        For i = 0 To RecordSet.Fields.Count - 1
+            'pegando valor da célula
+            Planilha1.Range(Chr(Columna + 65) & _
+                            Linha + 1).Value = RecordSet.Fields(Columna)
+            Coluna = Coluna + 1
+        Next
+
+        'Zerar indice das colunas
+        Coluna = 0
+        
+        'Incrementar linha para proximo registro
+        Linha = Linha + 1
+        'Proximo Registro
+        RecordSet.MoveNext
+    Loop
+    
+
+    On Error Resume Next
+    RecordSet.Close
+    Conect.Close
+    Set Conect = Nothing
+    Set RecordSet = Nothing
+
+End If
+
+Call CriarTabela
+Exit Function
+ErrorHandler:
+
+MsgBox "ERROR: " & Err.Description, vbExclamation, "Estoque SQLServer"
+End Function
+
+Sub CriarTabela()
+'Criar tabela na planilha 1
+Planilha1.ListObjects.Add(xlSrcRange, Planilha1.UsedRange, , xlYes).Name = _
+"Tabela1"
+Planilha1.ListObjects("Tabela1").TableStyle = "TableStyleMedium2"
+End Sub

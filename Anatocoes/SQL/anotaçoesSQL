@@ -1,0 +1,58 @@
+
+SMALLINT é um tipo de variavel (msm coisa que int soq menor)
+
+CONSTRAINT  nomeChave FOREIGN KEY (campoqestaligando) REFERENCES tabela_de_onde_vem_a_chave_estrangeira
+
+TRUNCATE TABLE tb_cursos  --serve para apagar todos os registros de uma tabela.
+
+SELECT TOP 3 , vai  selecionar os 3 primeiros valores. (a possibilidade de ser porcentagem tb).
+
+UNION ALL server para unir duas tuplas de uma tabela independentemente dos seus valores 
+
+Função MAX(valor) // retorna o maior valor da coluna
+Função MIN(valor) // retorna o menor valor da coluna
+Função AVG(valor) // retorna a media dos valores da coluna
+Função COUNT(valor) // retorna a quantidade dos valores da coluna
+Função SUM(valor) // retorna o soma dos valores da coluna
+
+Função BETWEEN 0 and 1 // retorna os valores entre a e 1
+Função LIKE 'p%' // retorna os valores da coluna que tiver como sua primeira letra p
+Função Inner Join // quando dois dados de uma tabela sao iguais
+
+Em SQL pode se fazer calculos logo na criação da tabela.
+
+Create Index // cria um index para a tabela 
+create rule // cria uma regra para o bando de dados 
+
+EXECUTE sp_binrule // associa a regra a um campo da tabela
+
+BACKUP DATABASE teste TO DISK = 'diretorio escolhido' // salva um backup do banco de dados em um diretorio escolhido
+
+Quando se tem uma palavra dupla para nomear uma coluna é necessario colocar aspas simples.
+
+As views elas funcionam para guardar informações de alguns campos da tabela para recuperar depois atraves de buscas 
+servem para otimizar consultas.
+
+
+Criando variaveis 
+    para declarar : usar DECLARE @valor INT, @Texto VARCHAR(45), @DATE DATE, @SALARIO MONEY
+    sempre iniciar a variavel com @
+
+    para setar valores em uma variavel usar o SET
+    Exemplo:
+        SET @VALOR = 50
+        SET @TEXTO = 'HUGO'
+        SET @DATE = GETDATE()
+
+
+Para converter em String pode se usar o CAST(valor AS TIPO)
+ou tb pode se usar o CONVERT(TIPO, VALOR) // podendo colorcar em padroes. tipo padroes brasileiros de data e moeda
+
+
+Testes condicionais usando if iqual em outras linguagens de programação 
+
+Para criar funções usar o comando 'CREATE FUNCTION' nomeDaFunção(parametros) RETURNS oque a função retorna
+//Lembrar de colocar dentro de um bloco BEGIN e AND
+para chamar a função basta usar dbp_nome_da_função
+
+TRIGGER pode ser usado para fazer uma ação apos a inserção de um valor 
