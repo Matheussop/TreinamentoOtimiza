@@ -30,10 +30,10 @@ Funciona atrávez de tags, tornando se uma linguagem de marcação
 ```
 
 Em HTML5 temos algumas estruturas com:
+_ Header (cabeçalho da página)
+_ Footer (rodápe da página)
+_ Article (Parte principal da página)
+_ Aside (algo que n pertence explicitamente a página)
+_ Section (criar uma sessao de conteudo)
+_ Div (para criar blocos) \* Nav (Normalmente onde fica o menu)
 
-- Header (cabeçalho da página)
-- Footer (rodápe da página)
-- Article (Parte principal da página)
-- Aside (algo que n pertence explicitamente a página)
-- Section (criar uma sessao de conteudo)
-- Div (para criar blocos) \* Nav (Normalmente onde fica o menu)
