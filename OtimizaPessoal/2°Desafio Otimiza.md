@@ -2,7 +2,7 @@
 
 1. Pensar na linguagem e ferramentas a ser utilizadas
 2. 
-
+  
   * Calcular o tempo de uso da cadeira e o tempo de descanso(lembrar do tempo de preparo)
   * Tentar usar api do google de calendario / ou nao 
   * Pensar em coisas diferentes para melhorar a experiência do usúario
@@ -18,5 +18,6 @@
 3. Primeira tela devera ser a de login para o app/ou web app
    * sendo possivel fazer login pela matricula da empresa.
    * 
+   
   
          
