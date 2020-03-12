@@ -9,7 +9,7 @@ Surge quando é necessario a utilização de informações externas à aplicaç�
 Atualmente ainda não existe drivers ou aplicações externas que permite que nossa aplicação converse diretamente com o servidor de banco de dados. Mas foi criada uma forma de solucionar isso atraves de serviços ou [WebServices](#WebServices).
 
 ## O projeto
-
+Criar um Chat com WebServices
 ### WebServices
 Usada na comunicação entre aplicações diferentes. Possibilitando interação de novas aplicações com antigas e que sistemas desenvolvidos em plataformas diferentes sejam compativeis.  
 [Saiba Mais](README.md).  <br><br>
@@ -38,17 +38,44 @@ Usada na comunicação entre aplicações diferentes. Possibilitando interação
 
 ## Metodos utilizados
 
-- ### GetAsync
+- ### [GetAsync](https://docs.microsoft.com/pt-br/dotnet/api/system.net.http.httpclient.getasync?view=netframework-4.8)
   Enviar uma solicitação GET para uma URL especificada como uma operação assíncrona.
   Exemplo:
   ```CSharp
-  HttpResponseMessage resposta = requisicao.PutAsync(URL, param).GetAwaiter().GetResult();
+  HttpResponseMessage resposta = requisicao.GetAsync(URL).GetAwaiter().GetResult();
   ```
-  Parâmetros: URL que recebera a solicitação
+  Parâmetros: URL que recebera a solicitação  
   Retornos: Um objeto de tarefa que representa a operação assíncrona.
   No caso acima retornaria um [HttpResponseMessage](https://docs.microsoft.com/pt-br/dotnet/api/system.net.http.httpresponsemessage?view=netframework-4.8) que nos permite ver o [Status](https://docs.microsoft.com/pt-br/dotnet/api/system.net.http.httpresponsemessage.statuscode?view=netframework-4.8#System_Net_Http_HttpResponseMessage_StatusCode) da solicitação, usando 
   ```CSharp
   resposta.StatusCode
   ```
-  [Saiba Mais](README.md)
+- ### [PutAsync](https://docs.microsoft.com/pt-br/dotnet/api/system.net.http.httpclient.putasync?view=netframework-4.8)
+  Envia uma solicitação PUT para a URL especificada como uma operação assíncrona. Exemplo:
+  ```CSharp
+  HttpResponseMessage resposta = requisicao.PutAsync(URL, param).GetAwaiter().GetResult();
+  ```
+  Parâmetros: URL que recebera a solicitação;  
+  Contet, o conteúdo da solicitação HTTP enviada ao servidor;  
+  CancellationToken, um token de cancelamento que pode ser usado por outros objetos ou threads para receber avisos de cancelamento.  
+  Retornos: Um objeto de tarefa que representa a operação assíncrona.
+
+- ### [PostAsync](https://docs.microsoft.com/pt-br/dotnet/api/system.net.http.httpclient.postasync?view=netframework-4.8)
+  Envia uma solicitação Post para a URL especificada como uma operação assíncrona. Exemplo:
+  ```CSharp
+  HttpResponseMessage resposta = requisicao.PostAsync(URL, param).GetAwaiter().GetResult();
+  ```
+  Parâmetros: URL que recebera a solicitação;  
+  Contet, o conteúdo da solicitação HTTP enviada ao servidor;  
+  CancellationToken, um token de cancelamento que pode ser usado por outros objetos ou threads para receber avisos de cancelamento.  
+  Retornos: Um objeto de tarefa que representa a operação assíncrona.  
+
+- ### [DeleteAsync](https://docs.microsoft.com/pt-br/dotnet/api/system.net.http.httpclient.deleteasync?view=netframework-4.8)
+  Envia uma solicitação Delete para a URL especificada como uma operação assíncrona. Exemplo:
+  ```CSharp
+  HttpResponseMessage resposta = requisicao.DeleteAsync(URL).GetAwaiter().GetResult();
+  ```
+  Parâmetros: URL que recebera a solicitação;  
+  CancellationToken, um token de cancelamento que pode ser usado por outros objetos ou threads para receber avisos de cancelamento.  
+  Retornos: Um objeto de tarefa que representa a operação assíncrona.
 
