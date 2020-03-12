@@ -13,3 +13,9 @@
 - Changed : [Changed(Xamarin Docs)](https://docs.microsoft.com/pt-br/xamarin/xamarin-forms/app-fundamentals/triggers)
 
 - DateTime : [DateTime (.Net Docs)](https://docs.microsoft.com/pt-br/dotnet/api/system.datetime?view=netframework-4.8)
+
+- WebServices : [WebServices( como funciona )](https://www.soawebservices.com.br/como-funciona.aspx)
+
+-  Rest : [Rest (O que é)](https://blog.algaworks.com/4-conceitos-sobre-rest-que-qualquer-desenvolvedor-precisa-conhecer/)
+- Soap : [SOAP (Wiki)](https://pt.wikipedia.org/wiki/SOAP)
+- Wsdl : [WSDL (StackOverFlow)](https://pt.stackoverflow.com/questions/29116/o-que-%c3%a9-wsdl-web-services-description-language)
