@@ -1,3 +1,5 @@
+# BootStrap
+As principais anotações estão no seguinte arquivo [anotações](Anotações.md). Recomendo dar uma olhada caso queira entender mais sobre o framework. 
 ## Saiba Mais
 - Adicionando Bootstrap na aplicação: [Introdução](https://getbootstrap.com.br/docs/4.1/getting-started/introduction/)
 - jQuery: [(Oficial WebSite)](https://jquery.com/)
