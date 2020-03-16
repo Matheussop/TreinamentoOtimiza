@@ -26,12 +26,12 @@
 
   - Exemplo para instalação do js:
 
-  ```HTML
-  <body>
-      <h1>Olá,mundo!</h1>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
-  </body>
-  ```
+    ```HTML
+    <body>
+        <h1>Olá,mundo!</h1>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+    </body>
+    ```
 
   &emsp;no caso o link esta sendo passado pela tag script.
 
@@ -123,3 +123,68 @@ Ou passando o arquivo baixado, localizado em um documento local.
   </div>
   ```
   No código acima a coluna do meio terá seu tamanho variando de acordo com o tamanho da tela do dispositivo(tamanho da grid), sendo que ela ocupa 6 espaços em dispositivos grandes(com tela > 1200 pixels) e 4 espaços em dispositivos médios(com tela > 720 pixels).
+
+### Alinhamento
+- Vertical:
+    ```HTML
+    <div class="container">
+        <div class="row">
+            <div class="col align-self-start">
+                Uma de três colunas
+            </div>
+            <div class="col align-self-center">
+                Uma de três colunas
+            </div>
+            <div class="col align-self-end">
+                Uma de três colunas
+            </div>
+        </div>
+    </div>
+    ```
+    ![Alinhamento Vertical](AlinhamentoVertical.png)
+- Horizontal:
+    ```HTML
+    <div class="container">
+        <div class="row justify-content-start">
+            <div class="col-4">
+            Uma de duas colunas
+            </div>
+            <div class="col-4">
+            Uma de duas colunas
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-4">
+            Uma de duas colunas
+            </div>
+            <div class="col-4">
+            Uma de duas colunas
+            </div>
+        </div>
+        <div class="row justify-content-end">
+            <div class="col-4">
+            Uma de duas colunas
+            </div>
+            <div class="col-4">
+            Uma de duas colunas
+            </div>
+        </div>
+        <div class="row justify-content-around">
+            <div class="col-4">
+            Uma de duas colunas
+            </div>
+            <div class="col-4">
+            Uma de duas colunas
+            </div>
+        </div>
+        <div class="row justify-content-between">
+            <div class="col-4">
+            Uma de duas colunas
+            </div>
+            <div class="col-4">
+            Uma de duas colunas
+            </div>
+        </div>
+    </div>    
+    ```
+    ![Alinhamento Horizontal](AlinhamentoHorizontal.png)
