@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
+    <title>Popover</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <style type="text/css">
+      .row {
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 exemplo">
+          <button
+            type="button"
+            class="btn btn-lg btn-danger"
+            data-toggle="popover"
+            title="Titulo do Popover"
+            data-content="Velit cupidatat proident non ut. Nostrud ad id est sunt cillum incididunt non et in quis. Cupidatat reprehenderit qui esse ullamco laborum ipsum officia ut non nostrud deserunt voluptate velit. Quis cillum commodo minim aliquip magna et ea nisi deserunt incididunt. Deserunt id labore excepteur cupidatat consectetur in cillum."
+          >Clique para abrir o Popover</button>
+        </div>
+      </div>
+      <p>Culpa in consectetur laboris officia cillum est non est deserunt nisi. Aliqua ipsum non esse qui. Proident fugiat duis labore voluptate laboris dolor voluptate magna.
+
+Duis magna consectetur eiusmod eu consectetur eiusmod est do eu nostrud ut amet enim labore. Laboris id ut ullamco cillum reprehenderit aliquip nisi esse enim. Cupidatat aliquip dolore ipsum eu culpa esse non deserunt et esse quis elit ipsum et. Officia ullamco mollit non sint eiusmod occaecat nostrud. Fugiat do elit ullamco sint. Ipsum veniam laboris veniam minim nisi eiusmod. Eu commodo id commodo nisi commodo consectetur proident.
+
+Dolore magna laboris do non nostrud in laborum sint. Nostrud labore dolor voluptate ad irure cillum est excepteur dolor cupidatat. Exercitation adipisicing eiusmod qui in eiusmod. Excepteur labore nostrud qui magna sunt nisi.
+
+Non sunt eiusmod ex cillum sunt exercitation reprehenderit ullamco ullamco et mollit laborum. Occaecat fugiat consequat amet anim et fugiat. Dolor proident aliquip aliquip ex fugiat adipisicing incididunt occaecat esse. Fugiat culpa nulla pariatur voluptate do commodo et nostrud laboris. Nulla laboris ipsum esse esse.</p>
+
+      <div class="row">
+        <div class="col-12 exemplo">
+          <button
+            type="button"
+            class="btn btn-secondary"
+            data-container="body"
+            data-toggle="popover"
+            data-placement="right"
+            title="Titulo do Popover"
+            data-content="  Deserunt id labore excepteur cupidatat consectetur in cillum."
+          >Popover - right</button>
+          <button
+          type="button"
+          class="btn btn-secondary"
+          data-container="body"
+          data-toggle="popover"
+          data-placement="top"
+          title="Titulo do Popover"
+          data-content="  Deserunt id labore excepteur cupidatat consectetur in cillum."
+        >Popover - top</button>
+          <button
+          type="button"
+          class="btn btn-secondary"
+          data-container="body"
+          data-toggle="popover"
+          data-placement="left"
+          title="Titulo do Popover"
+          data-content="  Deserunt id labore excepteur cupidatat consectetur in cillum."
+        >Popover - left</button>
+
+        </div>
+        
+      </div>
+    </div>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+      $(function () {
+        $('[data-toggle="popover"]').popover()
+      })
+    </script>
+  </body>
+</html>
