@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
+    <title>Barra de Progresso</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <style type="text/css">
+      .row {
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 exemplo ">
+          <p>Voluptate deserunt ipsum culpa adipisicing do ea laborum. Exercitation ullamco nostrud exercitation laborum et cupidatat ullamco labore culpa minim aliqua consequat voluptate officia. Ut velit enim ex officia eu veniam. Nostrud enim velit ad esse exercitation tempor tempor quis. Reprehenderit ipsum ut irure irure aliquip nulla proident nulla sint Lorem. Quis sit reprehenderit et nulla culpa culpa non aute nisi sit. Officia occaecat aliqua qui sint ex ex culpa ex magna do nisi ullamco incididunt non.</p>
+          <button class="btn btn-secondary" type="button" data-toggle="tooltip" data-placement="top" title="Tooltip no Topo">
+            Tooltip TOP
+          </button>
+          <button class="btn btn-secondary" type="button" data-toggle="tooltip" data-placement="right" title="Tooltip na Direita">
+            Tooltip Direita
+          </button>
+          <button class="btn btn-secondary" type="button" data-toggle="tooltip" data-placement="bottom" title="Tooltip no em Baixo">
+            Tooltip em Baixo
+          </button>
+          <button class="btn btn-secondary" type="button" data-toggle="tooltip" data-placement="left" title="Tooltip na Esquerda">
+            Tooltip em Esquerda
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+      $(function(){
+        $('[data-toggle="tooltip"]').tooltip();
+      });
+    </script>
+  </body>
+</html>
