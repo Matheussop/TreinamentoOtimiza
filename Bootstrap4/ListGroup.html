@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
+    <title>List Group</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <style type="text/css">
+      .row {
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-4">
+            <ul class="list-group">
+                <li class="list-group-item">Item 1</li>
+                <li class="list-group-item active">Item 2</li>
+                <li class="list-group-item disabled">Item 3</li>
+                <li class="list-group-item">Item 4</li>
+                <li class="list-group-item">Item 5</li>
+            </ul>
+        </div>
+        <div class="col-4">
+            <div class="list-group">
+              <a href="#" class="list-group-item active">Link 1</a>
+              <a href="#" class="list-group-item list-group-item-action">Link 2</a>
+              <a href="#" class="list-group-item list-group-item-action">Link 3</a>
+              <a href="#" class="list-group-item list-group-item-action">Link 4</a>
+              <a href="#" class="list-group-item list-group-item-action">Link 5</a>
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="list-group">
+              <Button type="button"class="list-group-item list-group-item-action active">Button 1</a>
+              <Button type="button"class="list-group-item list-group-item-action">Button 2</Button>
+              <Button type="button"class="list-group-item list-group-item-action">Button 3</Button>
+              <Button type="button"class="list-group-item list-group-item-action" disable>Button 4</Button>
+              <Button type="button"class="list-group-item list-group-item-action">Button 5</Button>
+            </div>
+        </div>
+      </div>
+      <div class="row">
+          <div class="col-4">
+              <div class="list-group">
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h5>Titulo da minha lista</h5>
+                            <small>3 dias atrás</small>
+                        </div>
+                        <p class="mb-1">Sit ad et laborum Lorem pariatur ullamco. Adipisicing duis anim duis reprehenderit do.
+                          Sunt anim consectetur proident aliquip minim commodo.
+                          Adipisicing commodo elit dolore duis pariatur sit in ex exercitation ipsum fugiat ipsum veniam exercitation. Qui est laborum tempor nisi consequat cillum ut in.
+                          Esse eiusmod veniam irure laborum ad consectetur minim culpa eu pariatur sunt amet.</p>
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h5>Titulo da minha lista</h5>
+                            <small>3 dias atrás</small>
+                        </div>
+                        <p class="mb-1">Sit ad et laborum Lorem pariatur ullamco. Adipisicing duis anim duis reprehenderit do.
+                          Sunt anim consectetur proident aliquip minim commodo.
+                          Adipisicing commodo  ipsum veniam exercitation. Qui est laborum tempor nisi consequat cillum ut in.
+                          </p>
+                    </a>
+              </div>
+          </div>
+          <div class="row ">
+            <div class="col-3">
+                <div class="list-group" id="list-tab" role="tablist">
+                    <a href="#list-home" class="list-group-item list-group-item-action active" id="list-home-list"
+                    data-toggle="list" role="tab">HOME</a>
+                    <a href="#list-perfil" class="list-group-item list-group-item-action" id="list-perfil-list"
+                    data-toggle="list" role="tab">PERFIL</a>
+                    <a href="#list-clientes" class="list-group-item list-group-item-action" id="list-clientes-list"
+                    data-toggle="list" role="tab">CLIENTES</a>
+                    <a href="#list-contatos" class="list-group-item list-group-item-action" id="list-contatos-list"
+                    data-toggle="list" role="tab">CONTATOS</a>
+                  </div>
+              </div>
+              <div class="col-9">
+                   <div class="tab-content" id="nav-tabContent">
+                        <div id="list-home" class="tab-pane fade show active" role="tabpanel">
+                            <h3>Home</h3>
+                            <p> Enim irure anim culpa aute aliquip. Aliqua aliqua et non aliqua aliqua qui duis Lorem consequat duis cillum cillum. Amet sint adipisicing veniam in esse fugiat. Ea officia eu deserunt sunt aliqua.</p>
+                        </div>
+                        <div id="list-perfil" class="tab-pane fade" role="tabpanel">
+                            <h3>Perfil</h3>
+                            <p> Enim irure anim culpa aute aliquip. Aliqua aliqua et non aliqua aliqua qui duis Lorem consequat duis cillum cillum. Amet sint adipisicing veniam in esse fugiat. Ea officia eu deserunt sunt aliqua.</p>
+                        </div>
+                        <div id="list-clientes" class="tab-pane fade" role="tabpanel">
+                            <h3>Clientes</h3>
+                            <p> Enim irure anim culpa aute aliquip. Aliqua aliqua et non aliqua aliqua qui duis Lorem consequat duis cillum cillum. Amet sint adipisicing veniam in esse fugiat. Ea officia eu deserunt sunt aliqua.</p>
+                        </div>
+                        <div id="list-contatos" class="tab-pane fade ml-auto mr-auto" role="tabpanel">
+                            <h3>Contato</h3>
+                            <form>
+                                <div class="form-group">
+                                    <label for="nome">Nome</label>
+                                    <input type="text" class="form-control" name="nome" id="nome" placeholder="Digite seu nome">
+                                </div>
+                                <div class="form-group">
+                                    <label for="assunto">Assunto</label>
+                                    <input type="text" class="form-control" name="assunto" id="assunto" placeholder="Digite o assunto">
+                                </div>
+                                <div class="form-group">
+                                    <label for="telefone">Telefone</label>
+                                    <input type="text" class="form-control" name="telefone" id="telefone" placeholder="Digite o seu telefone">
+                                </div>
+                                <div class="form-group">
+                                    <label for="Conteudo">Conteúdo</label>
+                                    <textarea name="conteudo" id="conteudo" class="form-control"></textarea>
+                                </div>
+                                <button class="btn btn-primary">Enviar</button>
+                            </form>
+                        </div>
+                   </div>
+              </div>
+          </div>
+      </div>
+    </div>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>

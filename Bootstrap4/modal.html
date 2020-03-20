@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
+    <title>Modal</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <style type="text/css">
+      .row {
+        margin-bottom: 10px; 
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#modalExemplo1">Disparador do meu Modal</button>
+          <div class="modal fade" id="modalExemplo1">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Titulo do meu modal</h5>
+                  <button class="close" type="button" data-dismiss="modal"><span>&times;</span></button>
+                </div>
+                <div class="modal-body">
+                  <p>Corpo do meu modal</p>
+                </div>
+                <div class="modal-footer">
+                   <button class="btn btn-primary" type="button">Salvar Alterações</button>
+                   <button class="btn btn-danger" type="button">Cancelar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
